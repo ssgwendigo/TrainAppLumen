@@ -33,7 +33,7 @@ class WMAPIHelper extends Controller
             "api_key: $this->primaryAPIKey",
         ];
 
-        $url = "https://api.wmata.com/$command";
+        $url = "http://api.wmata.com/$command";
         $ch = curl_init($url);
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, $method);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
